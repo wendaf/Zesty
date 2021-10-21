@@ -33,7 +33,7 @@ export default function App() {
   <SafeAreaView style={styles.container}>
     <TextInput style={styles.text} placeholder="Quoi de neuf ?" onChangeText={text => setText(text)}/>
 
-    <TouchableOpacity onPress={onPress} style={styles.button}>
+    <TouchableOpacity onPress={onPress} style={styles.button} disabled={text.length<1}>
       <Text style={styles.buttonText}>Publier</Text>
     </TouchableOpacity>
 
